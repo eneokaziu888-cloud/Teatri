@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="sq"><head><meta charset="utf-8"><title>Teatri — Magjia që merr jetë në skenë</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#faf3e6;--tx:#2a1418;--cd:#fff;--ac:#7b1426;--go:#b8902f;--mu:#6b5a5d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#150a0d;--tx:#f5ead8;--cd:#251318;--ac:#d1475d;--go:#e0b955;--mu:#b9a7a9}}
+:root[data-theme=dark]{--bg:#150a0d;--tx:#f5ead8;--cd:#251318;--ac:#d1475d;--go:#e0b955;--mu:#b9a7a9}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Georgia,'Times New Roman',serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}h2{font-size:2rem;color:var(--ac);margin:0 0 .3em}
+nav{position:sticky;top:0;z-index:5;background:#3a0a14;display:flex;gap:.2rem;align-items:center;padding:.5rem .8rem;overflow-x:auto;white-space:nowrap}
+nav a,nav button{color:#f5e6c0;text-decoration:none;font:600 .85rem sans-serif;padding:.4rem .6rem;border-radius:8px;background:none;border:0;cursor:pointer}
+nav a:hover,nav button:hover{background:#ffffff22}#bar{position:fixed;top:0;left:0;height:3px;background:var(--go);width:0;z-index:9}
+section{max-width:1000px;margin:auto;padding:3rem 1.1rem}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;color:#f5e6c0;background:radial-gradient(ellipse at 50% 0,#ffd98a55,transparent 60%),linear-gradient(#2a0610,#5a0f1f);position:relative;overflow:hidden;padding:2rem 1rem}
+.hero:before,.hero:after{content:"";position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,#8d1428 0 24px,#6b0f1f 24px 48px);transition:transform 2.2s ease .3s;z-index:1}
+.hero:before{left:0}.hero:after{right:0}.open:before{transform:translateX(-92%)}.open:after{transform:translateX(92%)}
+.hero>div{position:relative;z-index:2;max-width:640px}.hero h1{font-size:clamp(2rem,7vw,4rem);margin:.2em 0}.hero p{font-size:1.15rem}
+.btn{display:inline-block;margin:.3rem;padding:.7rem 1.3rem;border-radius:30px;border:2px solid var(--go);background:var(--go);color:#2a1418;font:700 .95rem sans-serif;text-decoration:none;cursor:pointer}.btn.o{background:none;color:#f5e6c0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem}
+.card{background:var(--cd);border-radius:16px;padding:1.1rem;box-shadow:0 4px 16px #0002;transition:.25s;border:1px solid #b8902f33}.card:hover{transform:translateY(-5px);box-shadow:0 10px 24px #0003}
+.card .ic{font-size:2.4rem;display:block}.card h3{margin:.3rem 0;font-size:1.1rem}.card p{margin:.2rem 0;font-size:.92rem;color:var(--mu)}
+.tl{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.5rem}.tl button{flex:0 0 auto;padding:.5rem .8rem;border-radius:20px;border:1px solid var(--go);background:var(--cd);color:var(--tx);cursor:pointer;font:600 .85rem sans-serif}.tl button.on{background:var(--ac);color:#fff}
+#tlb{background:var(--cd);border-radius:16px;padding:1.2rem;margin-top:.8rem;border-left:6px solid var(--ac)}
+svg text{font:600 13px sans-serif}.part{cursor:pointer;transition:.2s}.part:hover,.part:focus{opacity:.7;outline:0}
+#info,.pan{background:var(--cd);border-radius:14px;padding:1rem;margin-top:.7rem}
+.opt{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.7rem 1rem;border-radius:12px;border:2px solid #b8902f66;background:var(--cd);color:var(--tx);font:1rem Georgia,serif;cursor:pointer;transition:.2s}.opt:hover{border-color:var(--ac)}.opt.ok{background:#1f8a4c;color:#fff;border-color:#1f8a4c}.opt.no{background:#b3261e;color:#fff;border-color:#b3261e;animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.pb{height:8px;background:#b8902f44;border-radius:6px;overflow:hidden;margin:.6rem 0}.pb i{display:block;height:100%;background:var(--ac);width:0;transition:.4s}
+input,textarea{width:100%;padding:.7rem;border-radius:10px;border:1px solid var(--go);background:var(--cd);color:var(--tx);font:1rem Georgia,serif;margin:.3rem 0}
+details{background:var(--cd);border-radius:12px;padding:.8rem 1rem;margin:.5rem 0}summary{cursor:pointer;font-weight:700}
+.end{text-align:center;background:#3a0a14;color:#f5e6c0;max-width:none;padding:4rem 1rem}.end h2{color:var(--go);max-width:800px;margin:auto}.end p{max-width:700px;margin:1rem auto}
+footer{background:#1c060b;color:#d9c9a8;text-align:center;padding:2rem 1rem;font-size:.9rem}footer a{color:var(--go)}
+#top{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--ac);color:#fff;font-size:1.2rem;cursor:pointer;display:none;z-index:6}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}.pair .opt{text-align:center;margin:0}.sel{outline:3px solid var(--go)}.done{opacity:.35;pointer-events:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<div id="bar"></div>
+<nav aria-label="Menu"><a href="#hyrje">🎭 Teatri</a><a href="#historia">Historia</a><a href="#rol">Roli</a><a href="#gjini">Gjinitë</a><a href="#skena">Skena</a><a href="#shqip">Teatri shqiptar</a><a href="#figura">Figura</a><a href="#kuiz">Kuiz</a><a href="#loja">Lojëra</a><a href="#fjalor">Fjalori</a><a href="#faq">FAQ</a><a href="#burime">Burime</a><button id="th" aria-label="Modaliteti ditë/natë">🌓</button></nav>
+
+<header class="hero" id="hyrje"><div>
+<div style="font-size:4rem" aria-hidden="true">🎭</div><h1>TEATRI — MAGJIA QË MERR JETË NË SKENË</h1>
+<p>Aty ku fjala bëhet gjest, drita bëhet emocion dhe njerëzit mësojnë të shohin veten te të tjerët.</p>
+<a class="btn" href="#historia">Eksploro botën e teatrit</a><a class="btn o" href="#kuiz">Testo njohuritë e tua</a></div></header>
+
+<section><h2>A e dije se…?</h2><p>Kliko një kartë për ta kthyer.</p><div class="grid" id="dyk"></div><p style="text-align:center"><button class="btn" id="nf">Më trego një fakt tjetër</button></p><div class="pan" id="fact" aria-live="polite">Kliko butonin për një fakt të ri.</div></section>
+
+<section id="historia"><h2>Historia e teatrit</h2><p>Kliko një periudhë për të zbuluar më shumë.</p><div class="tl" id="tl" role="tablist"></div><div id="tlb" aria-live="polite"></div></section>
+
+<section id="rol"><h2>Çfarë është teatri dhe cili është roli i tij?</h2>
+<p>Teatri është art i gjallë: aktorë dhe publik ndajnë të njëjtën hapësirë e të njëjtën kohë. Ai bashkon fjalën, trupin, hapësirën, dritën dhe zërin për të treguar një histori.</p>
+<div class="grid"><div class="card"><span class="ic">🤝</span><h3>Aktori dhe publiku</h3><p>Pa publik nuk ka shfaqje; çdo natë është e ndryshme.</p></div><div class="card"><span class="ic">💗</span><h3>Empati</h3><p>Duke jetuar jetë të huaja, mësojmë t’i kuptojmë të tjerët.</p></div><div class="card"><span class="ic">🧠</span><h3>Mendim kritik</h3><p>Teatri shtron pyetje mbi shoqërinë, drejtësinë dhe moralin.</p></div><div class="card"><span class="ic">📚</span><h3>Kulturë dhe edukim</h3><p>Ruan gjuhën, kujtesën dhe identitetin e një populli.</p></div></div></section>
+
+<section id="gjini"><h2>Llojet dhe gjinitë teatrale</h2><div class="grid" id="gj"></div><div id="gjd" class="pan" aria-live="polite">Zgjidh një gjini për detaje.</div></section>
+
+<section id="skena"><h2>Elementet e një shfaqjeje</h2><p>Kliko pjesët e skenës.</p>
+<svg viewBox="0 0 400 240" style="width:100%;max-width:560px;display:block;margin:auto" role="img" aria-label="Diagram i skenës teatrore">
+<rect x="0" y="0" width="400" height="240" rx="12" fill="#2a0610"/>
+<g class="part" tabindex="0" data-k="curtain"><rect x="10" y="10" width="60" height="150" fill="#8d1428"/><rect x="330" y="10" width="60" height="150" fill="#8d1428"/><text x="14" y="90" fill="#fff">Perdja</text></g>
+<g class="part" tabindex="0" data-k="set"><rect x="80" y="20" width="240" height="90" fill="#4a3a5a"/><text x="150" y="70" fill="#fff">Skenografia</text></g>
+<g class="part" tabindex="0" data-k="light"><polygon points="120,0 140,0 170,110 90,110" fill="#ffd98a66"/><text x="95" y="18" fill="#ffd98a">Ndriçimi</text></g>
+<g class="part" tabindex="0" data-k="actor"><circle cx="200" cy="120" r="12" fill="#f5e6c0"/><rect x="190" y="132" width="20" height="28" fill="#b8902f"/><text x="170" y="178" fill="#fff">Aktori</text></g>
+<g class="part" tabindex="0" data-k="prompt"><rect x="285" y="125" width="40" height="35" fill="#555"/><text x="270" y="178" fill="#fff">Sufleri</text></g>
+<g class="part" tabindex="0" data-k="aud"><rect x="20" y="190" width="360" height="40" rx="8" fill="#6b0f1f"/><text x="160" y="215" fill="#fff">Salla / publiku</text></g></svg>
+<div id="info" aria-live="polite">Kliko mbi një pjesë.</div></section>
+
+<section id="shqip"><h2>Teatri shqiptar</h2>
+<p>Teatri shqiptar lidhet fortë me Rilindjen Kombëtare, kur letërsia dhe skena u bënë mjete për gjuhën dhe identitetin. Të dhënat më poshtë janë të përzgjedhura me kujdes; për detaje kontrollo burimet.</p>
+<div class="grid"><div class="card"><span class="ic">📜</span><h3>Rilindja</h3><p>Sami Frashëri shkroi dramën “Besa” (1875), një nga veprat e para dramatike shqipe.</p></div>
+<div class="card"><span class="ic">✍️</span><h3>Dramaturgjia</h3><p>Andon Zako Çajupi shkroi komedinë “Baba Tomorri” (1902).</p></div>
+<div class="card"><span class="ic">🏛️</span><h3>Teatri Kombëtar</h3><p>Themelohet në Tiranë në vitin 1945 dhe mbetet institucioni kryesor i skenës shqiptare.</p></div>
+<div class="card"><span class="ic">🎭</span><h3>Aktorë të njohur</h3><p>Kadri Roshi, Violeta Manushi, Margarita Xhepa, Pjetër Gjoka.</p></div>
+<div class="card"><span class="ic">🧪</span><h3>Teatri Eksperimental</h3><p>Në Tiranë vepron edhe Teatri Kombëtar Eksperimental, i hapur ndaj formave të reja.</p></div>
+<div class="card"><span class="ic">⚠️</span><h3>Sfidat sot</h3><p>Financim i kufizuar, infrastrukturë dhe tërheqja e publikut të ri.</p></div></div></section>
+
+<section id="figura"><h2>Figura të shquara botërore</h2><div class="grid" id="fg"></div></section>
+
+<section id="kuiz"><h2>Kuize interaktive</h2><p>Pyetjet dhe alternativat përzihen çdo herë rastësisht.</p>
+<div id="qm" class="grid"></div><div id="qa" class="pan" hidden></div></section>
+
+<section id="loja"><h2>Lojëra edukative</h2>
+<div class="grid"><div class="pan"><h3>✅ E vërtetë apo e gabuar</h3><div id="tf"></div></div><div class="pan"><h3>🔗 Lidh çiftet</h3><p style="font-size:.85rem">Zgjidh një dramaturg, pastaj veprën e tij.</p><div id="mt"></div></div></div></section>
+
+<section id="fjalor"><h2>Fjalor i termave teatrale</h2><input id="fs" type="search" placeholder="Kërko një term…" aria-label="Kërko në fjalor"><div id="fl" class="grid"></div></section>
+
+<section id="faq"><h2>Pyetje të shpeshta</h2>
+<details><summary>Sa zgjat një shfaqje?</summary>Zakonisht 1–3 orë, sipas veprës.</details>
+<details><summary>Si të sillem në sallë?</summary>Mbylle telefonin, mbërrij në kohë dhe duartrokit në fund.</details>
+<details><summary>Si dallon teatri nga filmi?</summary>Në teatër shfaqja është e drejtpërdrejtë dhe çdo natë është unike.</details>
+<h3>Komente ose sugjerime</h3><form id="cf"><input id="cn" placeholder="Emri" required aria-label="Emri"><textarea id="cm" rows="3" placeholder="Mesazhi" required aria-label="Mesazhi"></textarea><button class="btn" type="submit" style="color:#2a1418">Dërgo</button> <span id="cok"></span></form>
+<p><button class="btn" id="sh">Ndaj faqen</button></p></section>
+
+<section id="burime"><h2>Burimet dhe referencat</h2>
+<ul><li>Encyclopaedia Britannica — “Theatre”, “Greek theatre”, “William Shakespeare”.</li><li>Teatri Kombëtar i Shqipërisë — faqja zyrtare.</li><li>Enciklopedia Shqiptare, Akademia e Shkencave e Shqipërisë.</li><li>The Shakespeare Birthplace Trust; arkiva të muzeve kombëtare.</li></ul>
+<p style="font-size:.9rem;color:var(--mu)">Nuk përdoren statistika pa burim. Për çdo datë të rëndësishme rekomandohet verifikimi në burimet e mësipërme.</p></section>
+
+<div class="end"><h2>TEATRI NUK ËSHTË VETËM NJË SKENË. ËSHTË NJË BOTË E TËRË EMOCIONESH, IDEESH DHE HISTORISH.</h2><p>Teatri ruan kujtesën e njerëzimit, e bën fjalën të gjallë dhe na kujton se çdo histori ka nevojë për dikë që e tregon dhe dikë që e dëgjon.</p></div>
+<footer><p><a href="#historia">Historia</a> · <a href="#shqip">Teatri shqiptar</a> · <a href="#kuiz">Kuiz</a> · <a href="#burime">Burimet</a></p><p>© Materialet origjinale janë të autorëve.</p><p><strong>Punoi: Eneo Kaziu dhe Dean Ramolli</strong></p></footer>
+<button id="top" aria-label="Kthehu lart">↑</button>
+
+<script>
+const $=s=>document.querySelector(s),sf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+setTimeout(()=>$('.hero').classList.add('open'),300);
+// tema & scroll
+$('#th').onclick=()=>{const r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=d?'light':'dark'};
+addEventListener('scroll',()=>{const h=document.documentElement;$('#bar').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';$('#top').style.display=h.scrollTop>400?'block':'none'});
+$('#top').onclick=()=>scrollTo({top:0});
+$('#sh').onclick=async()=>{try{await navigator.share({title:'Teatri',url:location.href})}catch(e){try{await navigator.clipboard.writeText(location.href);$('#sh').textContent='Lidhja u kopjua ✓'}catch(_){}}};
+$('#cf').onsubmit=e=>{e.preventDefault();$('#cok').textContent='Faleminderit, '+$('#cn').value+'!';e.target.reset()};
+// fakte
+const F=['Në Greqinë e lashtë teatri lidhej me festivalet për nder të Dionisit.','Maskat ndihmonin aktorët të luanin disa role dhe të shihnin më qartë nga publiku i largët.','Shekspiri shkroi rreth 37 vepra teatrore.','Sufleri u pshpërit aktorëve tekstin nga prapaskena.','Drita dhe muzika mund të ndryshojnë plotësisht emocionin e një skene.','Fjala “teatër” vjen nga greqishtja “theatron”, vendi ku shikon.','Teatri Kombëtar i Shqipërisë themelohet në Tiranë më 1945.'];
+$('#dyk').innerHTML=F.slice(0,4).map((f,i)=>`<div class="card" tabindex="0" role="button" data-f="${i}"><span class="ic">${['🏛️','🎭','✍️','🤫'][i]}</span><h3>Fakt #${i+1}</h3><p>Kliko për ta zbuluar</p></div>`).join('');
+document.querySelectorAll('#dyk .card').forEach(c=>{const g=()=>{c.querySelector('p').textContent=F[c.dataset.f]};c.onclick=g;c.onkeydown=e=>e.key==='Enter'&&g()});
+$('#nf').onclick=()=>$('#fact').textContent='💡 '+F[Math.floor(Math.random()*F.length)];
+// timeline
+const T=[['Greqia antike','Shek. V p.e.s.','Teatri lind në festivalet e Dionisit. Eskili, Sofokliu dhe Euripidi shkruajnë tragjedi; Aristofani komedi.'],['Roma','Shek. III p.e.s.','Romakët huazojnë formën greke; Plauti dhe Terenci shkruajnë komedi, Seneka tragjedi.'],['Mesjeta','Shek. X–XV','Dramat liturgjike dhe misteret e lëvizshme shfaqen në kisha e sheshe.'],['Rilindja','Shek. XVI–XVII','Shekspiri shkruan “Hamlet”, “Romeo dhe Zhuljeta”; teatri i Globit në Londër.'],['Klasicizmi francez','Shek. XVII','Molière shkruan “Tartuffe”; Racine dhe Corneille tragjedi.'],['Shek. XIX–XX','1800–1999','Ibsen, Çehov, Brecht dhe Stanislavski ndryshojnë dramën dhe interpretimin; shfaqet teatri absurd me Beckett.'],['Bashkëkohor','Sot','Teatër eksperimental, multimedial, performancë dhe formate të reja.']];
+$('#tl').innerHTML=T.map((t,i)=>`<button role="tab" data-i="${i}">${t[0]}</button>`).join('');
+const st=i=>{document.querySelectorAll('#tl button').forEach((b,j)=>b.classList.toggle('on',i==j));$('#tlb').innerHTML=`<h3>${T[i][0]} <small>(${T[i][1]})</small></h3><p>${T[i][2]}</p>`};
+document.querySelectorAll('#tl button').forEach(b=>b.onclick=()=>st(+b.dataset.i));st(0);
+// gjini
+const G=[['😢','Tragjedia','Personazhe të mëdhenj përballë fatit; përfundim i hidhur.','Mbreti Edip'],['😂','Komedia','Humor, gabime dhe zakonisht përfundim i lumtur.','Tartuffe'],['🎬','Drama','Konflikte realiste njerëzore.','Lulishtja e vishnjeve'],['💔','Melodrama','Emocione të forta, e mira kundër së keqes.','—'],['🎭','Tragjikomedia','Përzien tragjiken dhe komiken.','Në pritje të Godotit'],['🎵','Teatri muzikor','Këngë, kërcim dhe tekst.','Les Misérables'],['🎼','Opera','Teksti këndohet me orkestër.','La Traviata'],['🧸','Teatri i kukullave','Kukulla ose objekte që “luajnë”.','Teatri Guignol'],['🧪','Eksperimental','Thyen rregullat tradicionale.','Performancë bashkëkohore'],['❓','Absurd','Pakuptimësia e ekzistencës.','Beckett'],['🗣️','Monodrama','Një aktor, shumë zëra.','“Zhurnali i një të çmenduri”'],['⚡','Improvizimi','Pa tekst të parapërgatitur.','Shfaqje improvizimi']];
+$('#gj').innerHTML=G.map((g,i)=>`<div class="card" tabindex="0" role="button" data-i="${i}"><span class="ic">${g[0]}</span><h3>${g[1]}</h3><p>${g[2]}</p></div>`).join('');
+document.querySelectorAll('#gj .card').forEach(c=>{const g=()=>{const x=G[c.dataset.i];$('#gjd').innerHTML=`<h3>${x[0]} ${x[1]}</h3><p>${x[2]}</p><p><b>Shembull:</b> ${x[3]}</p>`};c.onclick=g;c.onkeydown=e=>e.key==='Enter'&&g()});
+// skena
+const S={curtain:['Perdja','Hap dhe mbyll shfaqjen; ndan botën reale nga ajo e skenës.'],set:['Skenografia','Hapësira vizuale: dekori dhe ndërtimi i skenës.'],light:['Ndriçimi','Drejton vëmendjen dhe krijon atmosferë e kohë.'],actor:['Aktori','Jep jetë personazhit me zë, trup dhe emocion.'],prompt:['Sufleri','Ndihmon aktorët me tekstin kur ata harrojnë.'],aud:['Salla dhe publiku','Pa publik shfaqja nuk plotësohet.']};
+document.querySelectorAll('.part').forEach(p=>{const g=()=>$('#info').innerHTML=`<b>${S[p.dataset.k][0]}</b> — ${S[p.dataset.k][1]}`;p.onclick=g;p.onkeydown=e=>e.key==='Enter'&&g()});
+// figura
+const P=[['Shakespeare','Anglia, 1564–1616','Hamlet, Makbeti, Romeo dhe Zhuljeta'],['Sofokliu','Greqi, rreth 496–406 p.e.s.','Mbreti Edip, Antigona'],['Aristofani','Greqi, shek. V–IV p.e.s.','Retë, Zogjtë'],['Molière','Francë, 1622–1673','Tartuffe, Koprraci'],['Ibsen','Norvegji, 1828–1906','Shtëpia e kukullës'],['Çehov','Rusi, 1860–1904','Lulishtja e vishnjeve, Tre motrat'],['Brecht','Gjermani, 1898–1956','Nëna Kurajë'],['Stanislavski','Rusi, 1863–1938','Sistemi i interpretimit; “Puna e aktorit”'],['Beckett','Irlandë, 1906–1989','Në pritje të Godotit']];
+$('#fg').innerHTML=P.map(p=>`<div class="card"><span class="ic">🧑‍🎨</span><h3>${p[0]}</h3><p>${p[1]}</p><p><b>Vepra:</b> ${p[2]}</p></div>`).join('');
+// kuize
+const Q={'Historia e teatrit':[['Ku lindi teatri perëndimor?','Greqia e lashtë','Roma','Egjipti','Franca','Greqia e lashtë.'],['Për nder të cilit perëndi bëheshin festivalet teatrale?','Dionisit','Zeusit','Apollonit','Aresit','Dionisi ishte perëndia e verës dhe teatrit.'],['Kush shkroi “Mbreti Edip”?','Sofokliu','Aristofani','Molière','Ibsen','Është tragjedi e Sofokliut.'],['Kush shkroi trilogjinë “Orestia”?','Eskili','Aristofani','Çehov','Beckett','Eskili është babai i tragjedisë.'],['Aristofani njihet për:','Komedi','Tragjedi','Opera','Monodramë','Shkroi komedi antike.'],['Kush shkroi “Hamlet”?','Shakespeare','Molière','Brecht','Çehov','Shakespeare, rreth vitit 1600.'],['Kush shkroi “Tartuffe”?','Molière','Shakespeare','Ibsen','Sofokliu','Molière, komediograf francez.'],['Kush shkroi “Lulishtja e vishnjeve”?','Çehov','Ibsen','Beckett','Eskili','Çehov, 1904.'],['“Në pritje të Godotit” i përket teatrit:','Absurd','Antik','Muzikor','Të kukullave','Beckett është figura e absurdit.'],['Kush shkroi “Shtëpia e kukullës”?','Ibsen','Brecht','Shakespeare','Molière','Ibsen, 1879.']],
+'Elementet e teatrit':[['Kush drejton interpretimin dhe vizionin e shfaqjes?','Regjisori','Sufleri','Kostumografi','Publiku','Regjisori koordinon gjithçka.'],['Ç’është skenografia?','Hapësira vizuale e skenës','Teksti','Muzika','Grimi','Dekori dhe ndërtimi i skenës.'],['Kush i ndihmon aktorët me tekstin?','Sufleri','Regjisori','Skenografi','Drejtori','Sufleri shqiptoi pa u dëgjuar.'],['Monologu është kur:','Një personazh flet vetëm','Dy personazhe flasin','Publiku flet','Nuk flet askush','Mono = një.'],['Dialogu është:','Bisedë mes personazheve','Fjalim i vetëm','Këngë','Pantomimë','Dialog = bisedë.'],['Rekuizita janë:','Objektet në skenë','Kostumet','Dritat','Ulëset','Si shpata ose libri.'],['Premiera është:','Shfaqja e parë para publikut','Prova e fundit','Leximi i tekstit','Fundi i sezonit','Shfaqja e parë zyrtare.'],['Prova gjenerale bëhet:','Para premierës','Pas premierës','Para leximit','Pa kostume','Është provë e plotë.'],['Ndriçimi në teatër shërben për:','Atmosferë dhe vëmendje','Vetëm shikim','Shitje biletash','Zhurmë','Krijon emocion.'],['Protagonisti është:','Personazhi kryesor','Antagonisti','Sufleri','Regjisori','Personazhi qendror.']],
+'Teatri shqiptar':[['Në cilin vit themelohet Teatri Kombëtar i Shqipërisë?','1945','1912','1970','1991','Themelohet në Tiranë më 1945.'],['Ku ndodhet Teatri Kombëtar?','Tiranë','Shkodër','Vlorë','Korçë','Në kryeqytet.'],['Kush shkroi “Besa” (1875)?','Sami Frashëri','Çajupi','Naim Frashëri','Fan Noli','Sami Frashëri.'],['Kush shkroi “Baba Tomorri”?','Çajupi','Sami Frashëri','Naim Frashëri','Migjeni','Çajupi, 1902.'],['Çfarë periudhe ndikoi teatrin e hershëm?','Rilindja Kombëtare','Mesjeta','Barok','Postmodernizmi','Gjuha dhe identiteti.'],['Kadri Roshi është:','Aktor','Piktor','Kompozitor','Arkitekt','Aktor i njohur shqiptar.'],['Margarita Xhepa është:','Aktore','Regjisore','Dramaturge','Skenografe','Aktore e njohur.'],['Violeta Manushi është:','Aktore','Piktore','Këngëtare vetëm','Shkrimtare','Aktore e njohur.'],['Roli i teatrit shqiptar lidhet me:','Gjuhën dhe identitetin','Vetëm argëtimin','Tregtinë','Sportin','Ruan kulturën.'],['Në çfarë gjuhe shfaqen vepra shqiptare?','Shqip','Greqisht','Latinisht','Frëngjisht','Në gjuhën shqipe.']]};
+let qs;$('#qm').innerHTML=Object.keys(Q).map(k=>`<div class="card" tabindex="0" role="button" data-k="${k}"><span class="ic">❓</span><h3>${k}</h3><p>10 pyetje</p></div>`).join('');
+document.querySelectorAll('#qm .card').forEach(c=>{const g=()=>qz(c.dataset.k);c.onclick=g;c.onkeydown=e=>e.key==='Enter'&&g()});
+function qz(k){const L=sf(Q[k]);let i=0,sc=0;const A=$('#qa');A.hidden=false;A.scrollIntoView({behavior:'smooth'});
+const show=()=>{if(i>=L.length){const p=sc/L.length,n=p>=.9?'Ekspert 🏆':p>=.7?'Shumë mirë 👏':p>=.4?'Mesatar 🙂':'Fillestar 📖';A.innerHTML=`<h3>${k}: ${sc}/${L.length}</h3><p>Niveli: <b>${n}</b></p><button class="btn" id="re" style="color:#2a1418">Provo përsëri</button><button class="btn" id="ot" style="color:#2a1418">Kuiz tjetër</button>`;$('#re').onclick=()=>qz(k);$('#ot').onclick=()=>{A.hidden=true;$('#kuiz').scrollIntoView()};return}
+const q=L[i],o=sf(q.slice(1,5));A.innerHTML=`<div class="pb"><i style="width:${i/L.length*100}%"></i></div><small>Pyetja ${i+1}/${L.length} · Pikë: ${sc}</small><h3>${q[0]}</h3>${o.map(x=>`<button class="opt">${x}</button>`).join('')}<p id="ex"></p>`;
+A.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{A.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.textContent===q[1])x.classList.add('ok')});if(b.textContent===q[1])sc++;else b.classList.add('no');$('#ex').innerHTML=q[5]+' <br><button class="btn" id="nx" style="color:#2a1418">Vazhdo</button>';$('#nx').onclick=()=>{i++;show()}})};show()}
+// E vërtetë / e gabuar
+const TF=[['Teatri perëndimor lindi në Greqinë e lashtë.',1],['Aristofani shkroi tragjedi.',0],['Sufleri ndihmon aktorët me tekstin.',1],['Teatri Kombëtar i Shqipërisë themelohet më 1945.',1],['Molière shkroi “Hamlet”.',0],['Monologu është bisedë mes dy vetave.',0]];
+(function(){let L=sf(TF),i=0,sc=0;const e=$('#tf');const r=()=>{if(i>=L.length){e.innerHTML=`<p>Rezultati: <b>${sc}/${L.length}</b></p><button class="btn" id="tr" style="color:#2a1418">Luaj përsëri</button>`;$('#tr').onclick=()=>{L=sf(TF);i=0;sc=0;r()};return}
+e.innerHTML=`<p>${L[i][0]}</p><button class="opt" data-v="1">E vërtetë</button><button class="opt" data-v="0">E gabuar</button><p id="tfx"></p>`;e.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const ok=+b.dataset.v===L[i][1];if(ok)sc++;e.querySelectorAll('.opt').forEach(x=>x.disabled=true);b.classList.add(ok?'ok':'no');setTimeout(()=>{i++;r()},900)})};r()})();
+// Lidh çiftet
+const M=[['Shakespeare','Hamlet'],['Sofokliu','Mbreti Edip'],['Çehov','Lulishtja e vishnjeve'],['Beckett','Në pritje të Godotit']];
+(function(){const e=$('#mt');let a=null,ok=0;e.innerHTML=`<div class="pair"><div>${sf(M).map(m=>`<button class="opt" data-a="${m[0]}">${m[0]}</button>`).join('')}</div><div>${sf(M).map(m=>`<button class="opt" data-b="${m[0]}">${m[1]}</button>`).join('')}</div></div><p id="mx"></p>`;
+e.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{e.querySelectorAll('[data-a]').forEach(x=>x.classList.remove('sel'));a=b;b.classList.add('sel')});
+e.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{if(!a)return;if(a.dataset.a===b.dataset.b){a.classList.add('ok','done');b.classList.add('ok','done');ok++;$('#mx').textContent=ok==M.length?'🎉 Të gjitha çiftet u lidhën!':'Saktë!'}else{b.classList.add('no');setTimeout(()=>b.classList.remove('no'),500);$('#mx').textContent='Provo përsëri.'}a.classList.remove('sel');a=null})})();
+// Fjalori
+const W=[['Aktor','Personi që interpreton një rol.'],['Dramaturg','Autori i veprave teatrore.'],['Regjisor','Drejton shfaqjen dhe aktorët.'],['Skenografi','Dekori dhe hapësira vizuale e skenës.'],['Skenar','Teksti i shfaqjes me dialogë dhe shënime.'],['Monolog','Fjalim i një personazhi vetëm.'],['Dialog','Bisedë mes personazheve.'],['Tragjedi','Gjini serioze me përfundim të hidhur.'],['Komedi','Gjini humoristike.'],['Protagonist','Personazhi kryesor.'],['Antagonist','Personazhi që i kundërvihet protagonistit.'],['Premiera','Shfaqja e parë para publikut.'],['Repertor','Shfaqjet që një teatër luan gjatë sezonit.'],['Improvizim','Interpretim pa tekst të përgatitur.'],['Prapaskenë','Hapësira pas skenës ku punojnë ekipet.']];
+const rf=q=>$('#fl').innerHTML=W.filter(w=>(w[0]+w[1]).toLowerCase().includes(q.toLowerCase())).map(w=>`<div class="card"><h3>${w[0]}</h3><p>${w[1]}</p></div>`).join('')||'<p>Asnjë rezultat.</p>';
+rf('');$('#fs').oninput=e=>rf(e.target.value);
+</script></body></html>
